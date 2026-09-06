@@ -17,10 +17,10 @@ void enqueue (int x){
 }
 
 int dequeue(){
-    if(q.r<q.f){
-        return -1;
-    }
-    return(q.a[q.f++]);
+  if(q.r<q.f){
+    return -1;
+  }
+  return(q.a[q.f++]);
 }
 
 int peek(){
