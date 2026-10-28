@@ -75,7 +75,8 @@ int main() {
     printf("\nOriginal Array: ");
     printArray(A, n);
 
-    radixSort(A, n);
+    radixSort(A, n); 
+    
 
     printf("Sorted Array:   ");
     printArray(A, n);

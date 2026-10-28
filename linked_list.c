@@ -90,11 +90,12 @@ void delpos(int pos){
     while(c<pos-1){
         temp= temp->next;
         c++;
-        t= temp -> next;
-        temp -> next = t ->next;
-        printf("\n Deleted node info is %d\n",t -> data);
-        free(t);
-    }
+    }   
+    t= temp -> next;
+    temp -> next = t ->next;
+    printf("\n Deleted node info is %d\n",t -> data);
+    free(t);
+    
 }
 
 int search(int k){
@@ -202,79 +203,3 @@ int main(){
     }
     
 }
-
-
-// // Linked list polynomial addition
-// #include<stdio.h>
-// #include<stdlib.h>
-
-// struct node{
-//     int data;
-//     int coef;
-//     struct node *next;
-// };
-// // struct node{
-// //     int data2;
-// //     int coef2;
-// //     struct node *next2;
-// // };
-
-// struct node *head1= NULL, *temp1;
-// struct node *head2= NULL, *temp2;
-
-// void inspoly1(int x,int c){
-//     struct node *t;
-//     temp1= (struct node*)malloc(sizeof(struct node));
-//     temp1 -> data = x;
-//     temp1 -> coef = c;
-//     temp1 -> next= NULL;
-//     if(head1 == NULL){
-//         head1 = temp1;
-//     }else{
-//         t = head1;
-//         while(t->next!= NULL){
-//             t= t->next;
-//         }
-//         t -> next= temp1;
-//     }
-// }
-
-// void inspoly2(int x,int c){
-//     struct node *t;
-//     temp2= (struct pol2*)malloc(sizeof(struct node));
-//     temp2 -> data = x;
-//     temp2 -> coef = c;
-//     temp2 -> next= NULL;
-//     if(head2 == NULL){
-//         head2 = temp2;
-//     }else{
-//         t = head2;
-//         while(t->next!= NULL){
-//             t= t->next;
-//         }
-//         t -> next= temp2;
-//     }
-// }
-
-// void add(){
-    
-// }
-
-// void display(){
-//     temp1 = head1;
-//     printf("\n 1st Linked list");
-//     while(temp1 != NULL){
-//         printf("%d",temp1->data);
-//         temp1= temp1 -> next;
-//     }
-// }
-
-// int main(){
-//     int x,c;
-//     printf("enter element:");
-//     scanf("%d",&x);
-//     printf("enter coeff:");
-//     scanf("%d",&c);
-//     inspoly1(x,c);
-//     display();
-// }
